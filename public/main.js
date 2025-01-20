@@ -10,6 +10,9 @@ const Category = document.getElementById("category");
 fetchAdice();
 
 async function fetchAdice() {
+  loading.classList.remove("error");
+  loading.textContent = "Loading";
+
   const URL = "https://api.adviceslip.com/advice";
   mainContainer.classList.add("load");
   try {
@@ -28,7 +31,7 @@ async function fetchAdice() {
 }
 
 async function fetchAdiceBYSpecification() {
-  const URL = "https://6749c1828680202966327f1c.mockapi.io/quotes-api";
+  const URL = "https://6749c1828680202966327f1c.mockapi.io/quotes-ap";
   mainContainer.classList.add("load");
 
   const id = Math.floor(Math.random() * 21);
