@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public\images\Screenshot.png)
+![Screenshot](./public/images/Screenshot.png)
 
 ## My process
 
