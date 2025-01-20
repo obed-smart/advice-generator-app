@@ -31,7 +31,10 @@ async function fetchAdice() {
 }
 
 async function fetchAdiceBYSpecification() {
-  const URL = "https://6749c1828680202966327f1c.mockapi.io/quotes-ap";
+  loading.classList.remove("error");
+  loading.textContent = "Loading";
+
+  const URL = "https://6749c1828680202966327f1c.mockapi.io/quotes-api";
   mainContainer.classList.add("load");
 
   const id = Math.floor(Math.random() * 21);
@@ -62,9 +65,8 @@ function displayData({ advice, id }) {
 
 button.addEventListener("click", function () {
   const option = category.value;
-
+  
   if (option === "Random") fetchAdice();
 
   if (option !== "Random") fetchAdiceBYSpecification();
-  console.log(option);
 });
