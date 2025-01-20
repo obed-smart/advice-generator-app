@@ -18,20 +18,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-darkBlue grid place-items-center w-full h-[100vh]">
+<body class="bg-darkBlue relative   flex justify-center items-center w-full h-screen">
 
+  <section class="absolute top-8 lg:right-10 gap-4 flex items-center justify-center">
+    <label for="category" aria-controls="category" aria-labelledby="category"
+      class="text-3xl text-lightCyan font-medium mb-2">category:</label>
+    <select name="category" id="category"
+      class="text-xl lg:py-2 left-fullpx-1 outline-none border-none rounded-md bg-darkGrayishBlue  text-lightCyan">
+      <option value="Random">Random</option>
+      <option value="Motivation">Motivation</option>
+      <option value="Perseverance">Perseverance</option>
+      <option value="Success">Success</option>
+      <option value="LifeLessons">Life Lessons</option>
+      <option value="Philosophy">Philosophy</option>
+      <option value="AnimeQuotes">Anime Quotes</option>
+    </select>
 
+  </section>
 
   <section
-    class="w-[calc(100%-30px)] conainer md:w-[calc(100%-100px)]  group min-h-[300px] lg:w-[33rem] flex justify-center items-center  py-8 [&:where(.load)]:pb-20 px-5 space-y-10  relative rounded-lg bg-darkGrayishBlue  text-center">
+    class="w-[calc(100%-30px)] my-5 conainer md:w-[calc(100%-100px)]  group min-h-[300px] lg:w-[33rem] flex justify-center items-center  py-8 [&:where(.load)]:pb-20 px-5 space-y-10  relative rounded-lg bg-darkGrayishBlue  text-center">
     <div class="advice-container space-y-8 group-[.load]:hidden">
       <h1 class="text-xl text-neonGreen font-semibold tracking-[5px] uppercase"> Advice #<span id="data-id"
           class="tracking-normal">117</span>
       </h1>
 
       <p id="advice" class="text-[28px] font-medium text-lightCyan">
-        <q> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          non.</q>
+        <q> </q>
       </p>
 
       <picture class="">
