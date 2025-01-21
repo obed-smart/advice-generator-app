@@ -5,7 +5,7 @@ const loading = document.getElementById("loading");
 const error = document.getElementById("error");
 const container = document.querySelector(".advice-container");
 const mainContainer = document.querySelector(".conainer");
-const Category = document.getElementById("category");
+const category = document.getElementById("category");
 
 fetchAdice();
 
@@ -65,8 +65,12 @@ function displayData({ advice, id }) {
 
 button.addEventListener("click", function () {
   const option = category.value;
-  
+
   if (option === "Random") fetchAdice();
 
   if (option !== "Random") fetchAdiceBYSpecification();
+});
+category.addEventListener("change", (e) => {
+  if (e.target.value === "Random") fetchAdice();
+  fetchAdiceBYSpecification();
 });
